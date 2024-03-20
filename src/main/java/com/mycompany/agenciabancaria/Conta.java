@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.agenciabancaria;
-
 import com.mycompany.agenciabancaria.utilitarios.utilitario;
 
 /**
@@ -49,13 +48,14 @@ public class Conta {
     }
     
 
+    @Override
     public String toString() {
         return "\nNumero da Conta: " + this.getNmrConta() +
-                "\nNome: " + this.pessoa.getEmail()+
+                "\nEmail: " + this.pessoa.getEmail()+
                 "\nCPf: " + this.pessoa.getCPF()+
-                "\nEmail: " + this.pessoa.getNome()+
-                "\nEmail: " + this.pessoa.getNmrCelular()+
-                "\nEmail: " + this.pessoa.getIdade()+
+                "\nNome: " + this.pessoa.getNome()+
+                "\nNumero de celular: " + this.pessoa.getNmrCelular()+
+                "\nIdade: " + this.pessoa.getIdade()+
                 "\nSaldo: " + utilitario.doubleToString(this.getSaldo())+
                 "\n";
     }

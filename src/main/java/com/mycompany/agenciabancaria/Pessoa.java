@@ -68,13 +68,14 @@ public class Pessoa{
         this.Idade = Idade;
     }
   
+    @Override
      public String toString(){
          
          return "\nEmail:  " + this.getEmail()+
                  "\nCPF:  " + this.getCPF()+
                  "\nNome:  " + this.getNome() + 
-                 "\nNome:  " + this.getNmrCelular()+ 
-                 "\nCPF:  " + this.getIdade();
+                 "\nNpumero de Celular:  " + this.getNmrCelular()+ 
+                 "\nIdade:  " + this.getIdade();
                  
                 
          
