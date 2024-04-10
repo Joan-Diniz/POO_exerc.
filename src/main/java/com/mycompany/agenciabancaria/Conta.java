@@ -9,17 +9,15 @@ import com.mycompany.agenciabancaria.utilitarios.utilitario;
  *
  * @author joanp
  */
-public class Conta {
-    
+public abstract class Conta {
     private static int ContadorDeContas = 1;
-    
     private int NmrConta;
-    private Pessoa pessoa;
+    private Cliente cliente;
     private Double saldo = 0.0;
 
-    public Conta(Pessoa pessoa) {
+    public Conta(Cliente cliente) {
         this.NmrConta = Conta.ContadorDeContas;
-        this.pessoa = pessoa;
+        this.cliente = cliente;
         ContadorDeContas +=1;
     }
 
@@ -31,12 +29,12 @@ public class Conta {
         this.NmrConta = NmrConta;
     }
 
-    public Pessoa getPessoa() {
-        return pessoa;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public Double getSaldo() {
@@ -48,14 +46,15 @@ public class Conta {
     }
     
 
+
     @Override
-    public String toString() {
+     public String toString() {
         return "\nNumero da Conta: " + this.getNmrConta() +
-                "\nEmail: " + this.pessoa.getEmail()+
-                "\nCPf: " + this.pessoa.getCPF()+
-                "\nNome: " + this.pessoa.getNome()+
-                "\nNumero de celular: " + this.pessoa.getNmrCelular()+
-                "\nIdade: " + this.pessoa.getIdade()+
+                "\nEmail: " + this.cliente.getEmail()+
+                "\nCPf: " + this.cliente.getCPF()+
+                "\nNome: " + this.cliente.getNome()+
+                "\nNumero de celular: " + this.cliente.getNmrCelular()+
+                "\nIdade: " + this.cliente.getIdade()+
                 "\nSaldo: " + utilitario.doubleToString(this.getSaldo())+
                 "\n";
     }
@@ -86,7 +85,7 @@ public class Conta {
             ContaParaDeposito.saldo = ContaParaDeposito.getSaldo() + valor;
             System.out.println("Sua transferencia foi realizada!");
         }else{
-            System.out.println("Snao foi possivel realizar a transferencia!");
+            System.out.println("nao foi possivel realizar a transferencia!");
         }
         
     }
