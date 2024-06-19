@@ -1,0 +1,10 @@
+com\mycompany\blibioteca\Emprestimo.class
+com\mycompany\blibioteca\Livro.class
+com\mycompany\blibioteca\Tese.class
+com\mycompany\blibioteca\Blibioteca.class
+com\mycompany\blibioteca\Publicacoes.class
+com\mycompany\blibioteca\UsuarioEspecial.class
+com\mycompany\blibioteca\Autor.class
+com\mycompany\blibioteca\UsuarioComum.class
+com\mycompany\blibioteca\Artigo.class
+com\mycompany\blibioteca\Usuario.class
